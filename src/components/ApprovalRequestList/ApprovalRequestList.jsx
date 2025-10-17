@@ -1,6 +1,16 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import styles from './ApprovalRequestList.module.css';
+
+const CustomButton = ({ icon, text, onClick, disabled }) => {
+  const buttonClass = `${styles.actionButton} ${disabled ? styles.disabled : ''}`;
+  return (
+    <button className={buttonClass} onClick={onClick} disabled={disabled}>
+      {icon && <span className={styles.icon}>{icon}</span>}
+      <span className={styles.text}>{text}</span>
+    </button>
+  );
+};
 
 const ApprovalRequestItem = ({ request }) => {
   return (
@@ -27,15 +37,24 @@ const ApprovalRequestItem = ({ request }) => {
         <Typography variant="body2">Описание заявки</Typography>
       </Box>
       <Box className={styles.actions}>
-        <Button variant="outlined" className={styles.actionButton}>
-          СОГЛАСОВАТЬ
-        </Button>
-        <Button variant="outlined" className={styles.actionButton}>
-          ОТКЛОНИТЬ
-        </Button>
-        <Button variant="outlined" className={styles.actionButton}>
-          КОММЕНТАРИЙ
-        </Button>
+        <CustomButton
+          icon={<div className={styles.icon}>✅</div>}
+          text="СОГЛАСОВАТЬ"
+          onClick={() => console.log('Approve')}
+          disabled={request.isBlocked}
+        />
+        <CustomButton
+          icon={<div className={styles.icon}>❌</div>}
+          text="ОТКЛОНИТЬ"
+          onClick={() => console.log('Reject')}
+          disabled={request.isBlocked}
+        />
+        <CustomButton
+          icon={<div className={styles.icon}>💬</div>}
+          text="КОММЕНТАРИЙ"
+          onClick={() => console.log('Comment')}
+          disabled={request.isBlocked}
+        />
       </Box>
     </Box>
   );
