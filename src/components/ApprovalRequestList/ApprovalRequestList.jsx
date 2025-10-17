@@ -2,16 +2,6 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import styles from './ApprovalRequestList.module.css';
 
-const CustomButton = ({ icon, text, onClick, disabled }) => {
-  const buttonClass = `${styles.actionButton} ${disabled ? styles.disabled : ''}`;
-  return (
-    <button className={buttonClass} onClick={onClick} disabled={disabled}>
-      {icon && <span className={styles.icon}>{icon}</span>}
-      <span className={styles.text}>{text}</span>
-    </button>
-  );
-};
-
 const ApprovalRequestItem = ({ request }) => {
   return (
     <Box className={styles.requestItem}>
