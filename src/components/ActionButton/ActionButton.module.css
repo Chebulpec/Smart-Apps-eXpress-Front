@@ -1,0 +1,30 @@
+.actionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #107FCF; /* Цвет текста по умолчанию */
+    background-color: #E8F3FB; /* Цвет фона по умолчанию */
+    padding: 16px 16px;
+    border-radius: 12px; /* Закругление 12px */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+}
+
+.actionButton:hover {
+    background-color: #107FCF; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+.actionButton:active {
+    background-color: #107FCF;
+    color: #ffffff;
+}
+
+.actionButton.disabled {
+    background-color: #E2E2E2; /* Цвет фона при отключении */
+    color: #8A8A8A; /* Цвет текста при отключении */
+    cursor: not-allowed;
+}

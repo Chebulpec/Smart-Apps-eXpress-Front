@@ -1,5 +1,9 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import ActionButton from '../../components/ActionButton/ActionButton.jsx';
 import styles from './ApprovalRequestList.module.css';
 
 const ApprovalRequestItem = ({ request }) => {
@@ -27,21 +31,18 @@ const ApprovalRequestItem = ({ request }) => {
         <Typography variant="body2">Описание заявки</Typography>
       </Box>
       <Box className={styles.actions}>
-        <CustomButton
-          icon={<div className={styles.icon}>✅</div>}
-          text="СОГЛАСОВАТЬ"
+        <ActionButton
+          text="Согласовать"
           onClick={() => console.log('Approve')}
           disabled={request.isBlocked}
         />
-        <CustomButton
-          icon={<div className={styles.icon}>❌</div>}
-          text="ОТКЛОНИТЬ"
+        <ActionButton
+          text="Отклонить"
           onClick={() => console.log('Reject')}
           disabled={request.isBlocked}
         />
-        <CustomButton
-          icon={<div className={styles.icon}>💬</div>}
-          text="КОММЕНТАРИЙ"
+        <ActionButton
+          text="Комментарий"
           onClick={() => console.log('Comment')}
           disabled={request.isBlocked}
         />
