@@ -24,13 +24,13 @@
 }
 
 .avatar {
-  background-color: #03afd4;
+  background-color: #3E8DC6;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
-  width: 68px;
-  height: 68px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,28 +40,28 @@
 }
 
 .requestsCount {
-  background-color: #61c62b;
+  background-color: #FFA000;
   color: white;
   font-size: 14px;
   font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 12px;
+  padding: 5px 8px;
+  border-radius: 8px;
   position: absolute;
   top: -12px;
   right: -8px;
   z-index: 1;
+  box-shadow: 0 0 0 2px white; /* Белая обводка толщиной 4 пикселя */
 }
 
 .userInfo {
   display: flex;
   flex-direction: column;
-  margin-left: 16px;
+  margin-left: 10px;
 }
 
 .fio {
   font-size: 14px;
-  color: #757575;
-  margin-bottom: 4px;
+  color: #333333;
 }
 
 .fullName {
@@ -69,7 +69,6 @@
   font-weight: bold;
   color: #333333;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
 }
 
 .position {
