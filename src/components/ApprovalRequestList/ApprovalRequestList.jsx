@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ActionButton from '../../components/ActionButton/ActionButton.jsx';
 import styles from './ApprovalRequestList.module.css';
+import { requests } from '../../data'; // Импортируем данные
+
 const ApprovalRequestItem = ({ request }) => {
   return (
     <Box className={styles.requestItem}>
@@ -24,11 +26,10 @@ const ApprovalRequestItem = ({ request }) => {
         </Box>
       </Box>
       <Box className={styles.description}>
-        <Typography variant="body2">Описание заявки</Typography>
+        <Typography variant="body2">{request.description}</Typography> {/* Отображаем описание заявки */}
       </Box>
       <Box className={styles.actions}>
         <ActionButton
-   
           text="Согласовать"
           onClick={() => console.log('Approve')}
           disabled={request.isBlocked}
@@ -47,7 +48,8 @@ const ApprovalRequestItem = ({ request }) => {
     </Box>
   );
 };
-const ApprovalRequestList = ({ requests }) => {
+
+const ApprovalRequestList = () => {
   return (
     <Box className={styles.requestList}>
       {requests.map((request, index) => (
@@ -56,4 +58,5 @@ const ApprovalRequestList = ({ requests }) => {
     </Box>
   );
 };
+
 export default ApprovalRequestList;
