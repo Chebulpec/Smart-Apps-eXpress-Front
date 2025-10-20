@@ -1,11 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CancelIcon from '@mui/icons-material/Cancel';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ActionButton from '../../components/ActionButton/ActionButton.jsx';
 import styles from './ApprovalRequestList.module.css';
-
 const ApprovalRequestItem = ({ request }) => {
   return (
     <Box className={styles.requestItem}>
@@ -32,7 +28,7 @@ const ApprovalRequestItem = ({ request }) => {
       </Box>
       <Box className={styles.actions}>
         <ActionButton
-          icon={<CheckCircleIcon />}
+   
           text="Согласовать"
           onClick={() => console.log('Approve')}
           disabled={request.isBlocked}
@@ -51,7 +47,6 @@ const ApprovalRequestItem = ({ request }) => {
     </Box>
   );
 };
-
 const ApprovalRequestList = ({ requests }) => {
   return (
     <Box className={styles.requestList}>
@@ -61,5 +56,4 @@ const ApprovalRequestList = ({ requests }) => {
     </Box>
   );
 };
-
 export default ApprovalRequestList;
