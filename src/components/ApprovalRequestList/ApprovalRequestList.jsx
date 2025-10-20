@@ -32,6 +32,7 @@ const ApprovalRequestItem = ({ request }) => {
       </Box>
       <Box className={styles.actions}>
         <ActionButton
+          icon={<CheckCircleIcon />}
           text="Согласовать"
           onClick={() => console.log('Approve')}
           disabled={request.isBlocked}
