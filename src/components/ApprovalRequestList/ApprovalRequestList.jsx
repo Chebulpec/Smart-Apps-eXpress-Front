@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ActionButton from '../../components/ActionButton/ActionButton.jsx';
 import styles from './ApprovalRequestList.module.css';
-import { requests } from '../../data'; // Импортируем данные
+import { requests } from '../../data'; 
 
 const ApprovalRequestItem = ({ request }) => {
   return (
