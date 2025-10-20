@@ -73,3 +73,21 @@
   font-size: 16px;
   color: #757575;
 }
+
+.refreshButton {
+  margin-left: auto; /* Выравнивает иконку по правому краю */
+  display: flex;
+  align-items: center;
+}
+
+/* Опционально, вы можете добавить стили для иконки */
+.MuiSvgIcon-root {
+  font-size: 24px;
+  color: #3E8DC6;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.MuiSvgIcon-root:hover {
+  color: #FFA000;
+}

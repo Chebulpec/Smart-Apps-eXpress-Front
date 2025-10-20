@@ -1,10 +1,37 @@
-
-.overlay {
+/* src/components/ErrorOverlay/ErrorOverlay.module.css */
+.errorBox {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #ff4d4d;
+    color: white;
+    margin-top: 16px;
+    padding: 12px; 
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .iconContainer {
+    margin-right: 12px; 
+  }
+  
+  .errorIcon {
+    font-size: 24px;
+  }
+  
+  .errorTitle {
     font-size: 18px;
-    color: #ff0000;
+    margin: 0 0 5px 0;
+  }
+  
+  .errorMessage {
+    font-size: 14px;
+    margin: 0;
   }
