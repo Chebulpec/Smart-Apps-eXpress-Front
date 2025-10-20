@@ -10,8 +10,8 @@ const UserProfileBanner = ({ user }) => {
     <Box className={styles.card}>
       <Box className={styles.avatarContainer}>
         <Box className={styles.avatar}>
-          <Box className={styles.requestsCount}>{pendingRequestsCount}</Box>
           {initials}
+          <Box className={styles.requestsCount}>{pendingRequestsCount}</Box>
         </Box>
       </Box>
       <Box className={styles.userInfo}>

@@ -1,14 +1,14 @@
 .card {
   display: flex;
-  align-items: center;
   padding: 16px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 100%; /* Добавьте эту строку */
   max-width: 100%;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
+  box-sizing: border-box; /* Добавьте эту строку */
 }
 
 .avatarContainer {
@@ -45,18 +45,20 @@
   top: -12px;
   right: -8px;
   z-index: 1;
-  box-shadow: 0 0 0 2px white; /* Белая обводка толщиной 4 пикселя */
+  box-shadow: 0 0 0 2px white;
 }
 
 .userInfo {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+
 }
 
 .fio {
   font-size: 14px;
   color: #333333;
+  margin-bottom: 4px;
 }
 
 .fullName {
@@ -64,6 +66,7 @@
   font-weight: bold;
   color: #333333;
   letter-spacing: 0.5px;
+  margin-bottom: 4px;
 }
 
 .position {
